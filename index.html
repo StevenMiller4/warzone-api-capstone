@@ -21,37 +21,42 @@
 
       <div class="introduction">
         <h2>Introducing your personal Warzone Profile tracker!</h2>
-        <p> <!-- Insert brief paragraph explaining the site and what it does --> </p>
+        <p>This site will allow you to look up your Warzone profile and platform you play on and display your statistics. You can use this to track how many wins, kills, and equipment you use and compare them to your friends!</p>
       </div>
       
     <section class="form-submission">
-      <div class="profile-form" class="hide">
-      </div>
 
-      <div class="platform-form" class="hide">
-      </div>
+        <form id="js-search-profile">
+          <label for="profile-name">Profile Name:</label>
+          <input id="profile-name" type="text" name="profile" required>
+
+          <h3>Choose your Platform:</h3>
+          <select name="platforms" id="js-select-menu" required>
+            <option value="" disabled selected hidden>Platform</option>
+            <option value="psn">Playstation Network</option>
+            <option value="steam">Steam</option>
+            <option value="xbl">Xbox Live</option>
+            <option value="battle">Battlenet</option>
+            <option value="uno">Activision ID</option>
+            <option value="acti">Activision Tag</option>
+          </select>
+
+          <button type="submit" value="search">Submit</button>
+        </form>
+
     </section>
 
     <section class="display-stats">
-      <div class="win-loss" class="hide">
+
+      <div class="win-loss" class="hidden">
       </div>
 
-      <div class="kill-death" class="hide">
+      <div class="kill-death" class="hidden">
       </div>
 
-      <div class="score" class="hide">
-      </div>
-    </section>
-
-    <section class="misc-stats">
-      <div class="gun" class="hide">
+      <div class="score" class="hidden">
       </div>
 
-      <div class="lethal" class="hide">
-      </div>
-
-      <div class="killstreak" class="hide">
-      </div>
     </section>
     
   </main>
