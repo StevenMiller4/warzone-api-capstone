@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Warzone Profile Statistics</title>
+  <link rel="shortcut icon" href="#">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
     type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
@@ -21,14 +22,14 @@
 
       <div class="introduction">
         <h2>Introducing your personal Warzone Profile tracker!</h2>
-        <p>This site will allow you to look up your Warzone profile and platform you play on and display your statistics. You can use this to track how many wins, kills, and equipment you use and compare them to your friends!</p>
+        <p>This site will allow you to look up your Warzone profile, and platform you play on, and display your statistics. You can use this to track how many wins, kills, and score you've earned and compare them to your friends!</p>
       </div>
       
     <section class="form-submission">
 
         <form id="js-search-profile">
           <label for="profile-name">Profile Name:</label>
-          <input id="profile-name" type="text" name="profile" required>
+          <input id="profile-name" type="text" name="profile" placeholder="Replace # with %23" required>
 
           <h3>Choose your Platform:</h3>
           <select name="platforms" id="js-select-menu" required>
@@ -46,15 +47,21 @@
 
     </section>
 
-    <section class="display-stats">
+    <section id="results" class="display-stats">
 
-      <div class="win-loss" class="hidden">
+      <div id="win-loss" class="hidden">
+        <h3>Win-Loss</h3>
+          <ul id="wins"></ul>
       </div>
 
-      <div class="kill-death" class="hidden">
+      <div id="kill-death" class="hidden">
+        <h3>Kill Statistics</h3>
+          <ul id="kills"></ul>
       </div>
 
-      <div class="score" class="hidden">
+      <div id="score" class="hidden">
+        <h3>Score</h3>
+        <ul id="scores"></ul>
       </div>
 
     </section>
@@ -67,6 +74,7 @@
     
   <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
   <script src="app.js"></script>
+  <script type="text/javascript" src="config.js"></script>
 </body>
 
 </html>
