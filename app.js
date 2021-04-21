@@ -2,14 +2,13 @@
 
 const searchURL_wz = "https://call-of-duty-modern-warfare.p.rapidapi.com/warzone/"
 const searchURL_mp = "https://call-of-duty-modern-warfare.p.rapidapi.com/multiplayer/"
-const key = config.apiKey;
 
 const settings = {
 	"async": true,
 	"crossDomain": true,
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": key,
+		"x-rapidapi-key": "56484ce262msh40836608f1d847ap13259cjsn56c72e2d66df",
 		"x-rapidapi-host": "call-of-duty-modern-warfare.p.rapidapi.com"
 	}
 };
