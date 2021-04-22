@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Warzone Profile Statistics</title>
+  <title>Warzone Profile Tracker</title>
   <link rel="shortcut icon" href="#">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
     type="text/css" />
@@ -15,37 +15,26 @@
 <body>
 
   <header>
-    <h1>Warzone Profile Statistics</h1>
+    <h1>Call of Duty: Warzone Profile Statistics</h1>
   </header>
 
   <main class="container">
 
       <div class="introduction">
         <h2>Introducing your personal Warzone Profile tracker!</h2>
-        <p>This site will allow you to look up your Warzone profile and platform you play on, and display your statistics. You can use this to track how many wins, kills, and score you've earned and compare them to your friends!</p>
-        <p>If you have issues accessing the information on your account make sure to do the following:</p>
-        <ul>
-          <li>Make sure to replace the "#" in your profile name with "%23"</li>
-          <li>Your account may have privacy options set to prevent your stats from being pulled.
-            <ol>
-              <li>Visit <a href="https://s.activision.com/activision/login">Activision Login</a></li>
-              <li>Head to your "Profile"</li>
-              <li>Under "Account Linking" find your platform</li>
-              <li>Change the "Searchable" and "Data Visible" settings to "All"</li>
-            </ol>
-          </li>
-          <li>There are occasionally issues with finding your profile using Activision ID. You could try another platform if it doesn't work.</li>
-        </ol>
+        <p>Enter your profile name and platform below to display your statistics. Track your kills, deaths, wins, score, and more.</p>
+        <p>There is limited availibility for tracking profiles beyond the traditional map, Verdansk. Stats on Rebirth Island, Mini Royale, and Plunder are not available.</p>
+        <p>Some examples: xC4oud#1138 (Battlenet), Amartin743 (Playstation)</p>
       </div>
       
     <section class="form-submission">
 
         <form id="js-search-profile">
           <label for="profile-name">Profile Name:</label>
-          <input id="profile-name" type="text" name="profile" placeholder="Replace # with %23" required>
+          <input id="profile-name" type="text" name="profile" placeholder="Replace # with %23" autocomplete="off" required>
 
           <h3>Choose your Platform:</h3>
-          <select name="platforms" id="js-select-menu" required>
+          <select name="platforms" id="js-select-menu" autocomplete="off" required>
             <option value="" disabled selected hidden>Platform</option>
             <option value="psn">Playstation Network</option>
             <option value="steam">Steam</option>
@@ -60,10 +49,12 @@
 
     </section>
 
+    <p id="js-error-message" class="error-message"></p>
+
     <section id="results" class="display-stats">
 
       <div id="win-loss" class="hidden">
-        <h3>Win-Loss</h3>
+        <h3>Wins and Placements</h3>
           <ul id="wins"></ul>
       </div>
 
