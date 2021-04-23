@@ -38,7 +38,7 @@ function displayScore(responseJson) {
     $('#scores').append(
         `<li>Score: ${responseJson.br.score}</li>
         <li>Time Played: ${responseJson.br.timePlayed}</li>
-        <li>Score per Minute: ${responseJson.br.scorePerMinute}</li>`
+        <li>Score / Min: ${responseJson.br.scorePerMinute}</li>`
     );
 }
 
