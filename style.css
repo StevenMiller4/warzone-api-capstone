@@ -106,15 +106,26 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #dbd7d2;
+    border: 2px solid black;
+    border-radius: 2em;
+    margin-top: 30px;
 }
 
-.error-message ul {
+.error-message h3 {
+    font-size: 26px;
+}
+
+.error-message p {
+    border: none;
+}
+
+.error-message ol {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
-
 
 .button {
     margin: 0 auto;
@@ -126,6 +137,18 @@ header {
 
 .button:hover {
     background-color: #dbd7d2;
+}
+
+p {
+    background-color: #dbd7d2;
+    border: 5px solid black;
+    border-radius: 2em;
+}
+
+#results div {
+    background-color: #dbd7d2;
+    border: 5px solid black;
+    border-radius: 2rem;
 }
 
 @media all and (min-width: 700px) {

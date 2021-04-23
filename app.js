@@ -46,6 +46,7 @@ function displayResults(responseJson) {
     displayWinLoss(responseJson);
     displayKillDeath(responseJson);
     displayScore(responseJson);
+    $('js-error-message').addClass('hidden');
     $('#win-loss').removeClass('hidden');
     $('#kill-death').removeClass('hidden');
     $('#score').removeClass('hidden');
@@ -71,6 +72,7 @@ function findProfile(userProfile, userPlatform) {
             $('#win-loss').addClass('hidden');
             $('#kill-death').addClass('hidden');
             $('#score').addClass('hidden');
+            $('#js-error-message').removeClass('hidden');
             $('#profile-name').val('');
             $('#js-select-menu').val('');
             $('#js-error-message').html(`<h3>There was a problem locating your profile: ${err.message}.</h3>
