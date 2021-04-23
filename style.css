@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
+    font-weight: 600;
 }
 
 body {
@@ -99,6 +100,21 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+.error-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-message ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .button {
     margin: 0 auto;
