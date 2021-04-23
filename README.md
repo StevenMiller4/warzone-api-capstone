@@ -2,7 +2,7 @@
 
 A basic API Capstone that allows the user to enter a Profile name and Platform for the game, Call of Duty: Warzone, and retrieve statistics on kills, deaths, wins, placements, score, and more. 
 
-[Profile Tracker](https://stevenmiller4.github.io/warzone-api-capstone/)
+[Profile Tracker](https://stevenmiller4.github.io/warzone-profile-tracker/)
 
 ## Motivation
 
