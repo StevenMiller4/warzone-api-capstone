@@ -1,3 +1,5 @@
+/* Settings for entire page */
+
 * {
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -5,11 +7,13 @@
     font-weight: 600;
 }
 
+/* Set font and background color for entire page */
 body {
     background-color: #e5e4e2;
     color: #100c08;
 }
 
+/* Header customization */ 
 header {
     font-weight: 700;
     margin: 0;
@@ -26,6 +30,7 @@ header {
     border-radius: 10rem;
 }
 
+/* Customization for background image */
 .background {
     background-image: url('images/verdansk-background.jpg');
     background-repeat: no-repeat;
@@ -35,18 +40,7 @@ header {
     background-color: #464646;
 }
 
-header {
-    font-weight: 700;
-    margin: 0;
-    padding: 5rem;
-    height: 20vh;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Customization for the introduction section, the h2, p, and examples */
 .introduction {
     display: flex;
     flex-direction: column;
@@ -66,6 +60,7 @@ header {
     font-size: 12px;
 }
 
+/* Styling for the container used for form submission */
 .container {
     padding: 0;
     margin: 0;
@@ -77,6 +72,7 @@ header {
     border-radius: 5px;
 }
 
+/* In order to change the layout and styling of all the results sections*/ 
 #results {
     margin: 3em auto;
     display: flex;
@@ -101,6 +97,7 @@ header {
     align-items: center;
 }
 
+/* Customization to keep the error message with the same formatting as the rest of the page. */
 .error-message {
     display: flex;
     flex-direction: column;
@@ -127,6 +124,7 @@ header {
     align-items: center;
 }
 
+/* Added styling for the button, including hover */
 .button {
     margin: 0 auto;
     border: 3px solid;
@@ -139,6 +137,7 @@ header {
     background-color: #dbd7d2;
 }
 
+/* Troubles viewing content without this */
 p {
     background-color: #dbd7d2;
     border: 5px solid black;
@@ -151,6 +150,7 @@ p {
     border-radius: 2rem;
 }
 
+/* To make the app responsive with multiple media */
 @media all and (min-width: 700px) {
     * {
         font-size: 20px;
@@ -173,6 +173,7 @@ p {
     }
 }
 
+/* Specific customization for results for formatting and to keep hidden on landing page */
 .item {
     margin: 10px;
     flex: 1;

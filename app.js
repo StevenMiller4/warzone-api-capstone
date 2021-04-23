@@ -1,8 +1,9 @@
 'use strict';
 
+/* URL used for the GET requests. */
 const searchURL_wz = "https://call-of-duty-modern-warfare.p.rapidapi.com/warzone/"
-const searchURL_mp = "https://call-of-duty-modern-warfare.p.rapidapi.com/multiplayer/"
 
+/* Settings to be called when fetching the URL */
 const settings = {
 	"async": true,
 	"crossDomain": true,
@@ -13,6 +14,7 @@ const settings = {
 	}
 };
 
+/* Function to display the Wins and Placement stats */
 function displayWinLoss(responseJson) {
     $('#wins').empty();
     $('#wins').append(
@@ -24,6 +26,7 @@ function displayWinLoss(responseJson) {
     );
 }
 
+/* Function to display Kill and Death stats */
 function displayKillDeath(responseJson) {
     $('#kills').empty();
     $('#kills').append(
@@ -33,6 +36,7 @@ function displayKillDeath(responseJson) {
     );
 }
 
+/* Function to display Score and Time played stats */
 function displayScore(responseJson) {
     $('#scores').empty();
     $('#scores').append(
@@ -42,6 +46,7 @@ function displayScore(responseJson) {
     );
 }
 
+/* Function to display results, called after the responseJson is obtained */
 function displayResults(responseJson) {
     displayWinLoss(responseJson);
     displayKillDeath(responseJson);
@@ -55,10 +60,10 @@ function displayResults(responseJson) {
     $('#js-select-menu').val('');
 }
 
+/* Function to find the profile, given the profile name and platform. Also formats the query string. */ 
 function findProfile(userProfile, userPlatform) {
     const queryString = userProfile + '/' + userPlatform;
     const firstUrl = searchURL_wz + queryString;
-    const secondUrl = searchURL_mp + queryString;
 
     fetch(firstUrl, settings)
         .then(response => {
@@ -91,6 +96,7 @@ function findProfile(userProfile, userPlatform) {
         });
 }
 
+/* Function to watch form submission from user */
 function watchForm() {
     $('form').submit(event => {
         event.preventDefault();
