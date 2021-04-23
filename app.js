@@ -76,7 +76,6 @@ function findProfile(userProfile, userPlatform) {
             $('#js-error-message').html(`<h3>There was a problem locating your profile: ${err.message}.</h3>
             <p>If you have issues accessing the information on your account make sure to do the following:</p>
             <ul>
-              <li>Make sure to replace the "#" in your profile name with "%23". Example: profile#1111 = profile%231111</li>
               <li>Your account may have privacy options set to prevent your stats from being pulled.
                 <ol>
                   <li>Visit <a href="https://s.activision.com/activision/login">Activision Login</a></li>
@@ -93,7 +92,8 @@ function findProfile(userProfile, userPlatform) {
 function watchForm() {
     $('form').submit(event => {
         event.preventDefault();
-        const userProfile = $('#profile-name').val();
+        let userProfile = $('#profile-name').val();
+        userProfile = userProfile.replace('#', '%23');
         const userPlatform = $('#js-select-menu').val();
         findProfile(userProfile, userPlatform);
     });

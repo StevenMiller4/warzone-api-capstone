@@ -1,3 +1,104 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: #e5e4e2;
+}
+
+.background {
+    background-image: url('images/verdansk-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    font-weight: 700;
+    margin: 0;
+    padding: 5rem;
+    height: 20vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.introduction h2 {
+    font-size: 26px;
+}
+
+.introduction p {
+    padding: 1vh 12vw;
+}
+
+.smaller {
+    font-size: 12px;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    border-radius: 5px;
+}
+
+.results {
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.button {
+    margin: 0 auto;
+    border: 3px solid;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.button:hover {
+    background-color: #dbd7d2;
+}
+
+@media all and (min-width: 700px) {
+    * {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 48px;
+    }
+
+    .results {
+        flex-direction: row;
+    }
+
+
+}
+
+.item {
+    margin: 10px;
+    flex: 1;
+    align-items: center;
+}
+
 .hidden {
     display: none;
 }
